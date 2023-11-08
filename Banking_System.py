@@ -32,28 +32,28 @@ class SignUpAndLogIn(operation) :
 
 
   def log_in(self):
-    name= input("To sign in \nenter your name : ")
-    password =input("enter your password : ")
-
-    if self.name == name and self.password == password :
-      log_in = input("enter 1- deposit 2- withdraw : ")
-      if log_in == "1":
+    lname= input("To sign in \nenter your name : ")
+    lpassword =input("enter your password : ")
+  def check_login(self):
+    if self.name == self.lname and self.password == self.lpassword :
+      ope= input("enter 1- deposit 2- withdraw : ")
+      if ope == "1":
         self.deposit()
-        new_login = input("did you want to do another operation :( y / n ) ")
-        if new_login=="y":
-           self.log_in()
-        elif new_login=="n":
+        new_ope = input("did you want to do another operation :( y / n ) ")
+        if new_oe=="y":
+           self.check_logim()
+        elif new_ope=="n":
            print("thanks for use our bank")
         else:
          print("Invalid input.") 
 
 
-      elif log_in == "2":
+      elif ope == "2":
         self.withdraw()
-        new_login = input("did you want to do another operation :( y / n ) ")
-        if new_login=="y":
-           self.log_in()
-        elif new_login=="n":
+        new_ope = input("did you want to do another operation :( y / n ) ")
+        if new_ope=="y":
+           self.check_logim()
+        elif new_ope=="n":
            print("thanks for use our bank")
         else:
          print("Invalid input.")
@@ -69,11 +69,13 @@ class SignUpAndLogIn(operation) :
   def display(self):
     while True:
 
-        display = input("enter 1 - To log In  , 2 - To quit :")
+        display = input("enter 1 - To log In 2 - show balance , 3 - To quit :")
         if display == "1":
            self.log_in()
-        
-        elif display == "2":
+           self.check_login()
+        elif display=="2":
+          print("available balance is : ",self.balance)
+        elif display == "3":
             print("Thanks for using our bank.")
             break
         else:
