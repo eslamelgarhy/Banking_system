@@ -18,7 +18,7 @@ class operation:
         self.balance-= amount
         print(f"Withdrawn: {amount}\nYour balance is now: {self.balance}")
     else:
-            print("Insufficient funds.")
+            print(f"Insufficient funds. available balance :",self.balancs)
 
 
 
@@ -40,7 +40,7 @@ class SignUpAndLogIn(operation) :
       if ope == "1":
         self.deposit()
         new_ope = input("did you want to do another operation :( y / n ) ")
-        if new_oe=="y":
+        if new_ope=="y":
            self.check_login()
         elif new_ope=="n":
            print("thanks for use our bank")
