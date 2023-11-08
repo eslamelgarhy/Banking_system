@@ -41,7 +41,7 @@ class SignUpAndLogIn(operation) :
         self.deposit()
         new_ope = input("did you want to do another operation :( y / n ) ")
         if new_oe=="y":
-           self.check_logim()
+           self.check_login()
         elif new_ope=="n":
            print("thanks for use our bank")
         else:
@@ -52,7 +52,7 @@ class SignUpAndLogIn(operation) :
         self.withdraw()
         new_ope = input("did you want to do another operation :( y / n ) ")
         if new_ope=="y":
-           self.check_logim()
+           self.check_login()
         elif new_ope=="n":
            print("thanks for use our bank")
         else:
