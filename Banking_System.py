@@ -32,8 +32,8 @@ class SignUpAndLogIn(operation) :
 
 
   def log_in(self):
-    lname= input("To sign in \nenter your name : ")
-    lpassword =input("enter your password : ")
+    self.lname= input("To sign in \nenter your name : ")
+    self.lpassword =input("enter your password : ")
   def check_login(self):
     if self.name == self.lname and self.password == self.lpassword :
       ope= input("enter 1- deposit 2- withdraw : ")
@@ -65,6 +65,7 @@ class SignUpAndLogIn(operation) :
     else : 
        print("Name or Password error. try agin ")
        self.log_in() 
+       self.check_login()
     
   def display(self):
     while True:
